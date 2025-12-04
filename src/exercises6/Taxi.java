@@ -10,6 +10,8 @@ public class Taxi {
 		private String matricula;
 		private String municipio;
 		private int motor; // HAY QUE DEFINIR QUE VALORES PUEDE TOMAR??
+		
+		public static String[] tipoMotor= new String[] {"desconocido", "diesel", "gasolina"};
 	
 	/**
 	 * @return the matricula
@@ -47,11 +49,32 @@ public class Taxi {
 	public void setMotor(int motor) {
 		this.motor = motor;
 	}
+	
+	/**
+	 * @return the tipoMotor
+	 */
+/*	public String getTipoMotor() {
+		if (motor==0) {
+			tipoMotor= "desconocido";
+		}
+		else if (motor==1) {
+			tipoMotor= "diesel";
+		}
+		else {
+			tipoMotor= "gasolina";
+		}
+		return tipoMotor;		// NO ESTA EJECUTANDO ESTA FUNCION
+	}																	*/
+	
+	
 	@Override
 	public String toString() {
-		return "Taxi {\n provincia= " + provincia + "\n matricula= " + matricula + "\n municipio= " + municipio + "\n motor= "
-				+ motor + " }";
+		return "Taxi {\n\t provincia= " + provincia + "\n\t matricula= " + matricula + "\n\t municipio= " + municipio + "\n\t motor= "
+				+ tipoMotor[motor] + "\t}";
 	}
+	
+	
+	
 	public Taxi(String provincia, String matricula, String municipio, int motor) {
 		this.provincia = provincia;
 		this.matricula = matricula;
