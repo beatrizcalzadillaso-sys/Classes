@@ -86,6 +86,10 @@ public class Persona {
 		this.casado = casado;
 		this.numDocIdent = numDocIdent;
 	}
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + "]";
+	}
 	
 	
 	
